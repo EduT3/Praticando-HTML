@@ -6,5 +6,4 @@ Praticando html ao desenvolver o alura Plus
 | -------------  | --- |
 | :sparkles: Nome        | **Praticando HTML**
 | :label: Tecnologias | HTML, CSS (tecnologias utilizadas)
-| :rocket: URL         | https://url-deploy.com.br
-| :fire: Desafio     | https://url-do-desafio.com.br
+| :rocket: URL         | https://7daysofcoding-html.vercel.app
