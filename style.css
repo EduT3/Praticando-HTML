@@ -1,7 +1,7 @@
 :root {
   --branco-principal: #ffffff;
   --cinza-secundario: #c0c0c0;
-  --botao-azul: #167bf7;
+  --botao-azul: #1260be;
   --cor-de-fundo: #00030c;
   --fonte-fonte-principal: "Inter";
   --bota-azul-efeito: #06336b;
@@ -162,4 +162,31 @@ body {
 .container__botao:hover {
   background-color: var(--bota-azul-efeito);
   color: var(--cor-de-fundo);
+}
+
+/* Layout fluido e navegação por teclado. */
+* { box-sizing: border-box; }
+body { line-height: 1.6; font-family: Inter, system-ui, sans-serif; }
+img { max-width: 100%; height: auto; }
+.container { height: auto; min-height: 85vh; gap: 2rem; }
+.container__caixa { margin: 3rem clamp(1rem, 5vw, 6rem); }
+.secundario { margin: 0 auto; width: min(100% - 3rem, 1200px); padding: 3rem 0; }
+.descricao__titulo, .dispositivos__titulo { font-size: clamp(1.75rem, 4vw, 3rem); line-height: 1.2; }
+.container__botao:hover { color: white; }
+.rodape__lista, .dispositivos__lista { flex-wrap: wrap; gap: 1.5rem; padding: 1rem; }
+.rodape__texto { width: min(90%, 1000px); }
+a:focus-visible { outline: 3px solid #ffd166; outline-offset: 5px; }
+.skip-link { position: absolute; top: -5rem; left: 1rem; padding: 1rem; background: white; color: #000; z-index: 10; }
+.skip-link:focus { top: 1rem; }
+@media (max-width: 760px) {
+  .container { grid-template-columns: 1fr; min-height: 0; }
+  .principal { background-size: auto 18rem; background-position: top center; padding-top: 12rem; }
+  .container__caixa { background: #00030ced; border-radius: 1rem; padding: 1.25rem; margin: 1rem; }
+  .container__titulo { font-size: 1.45rem; }
+  .secundario__imagem { width: min(100%, 460px); justify-self: center; }
+  .container__descricao { padding: 0; }
+  .dispositivos { padding: 2rem 1rem; }
+  .dispositivos__lista { margin: 2rem 0; }
+  .dispositivos__lista li { flex: 1 1 180px; }
+  .lista__item { font-size: 1.4rem; }
 }
